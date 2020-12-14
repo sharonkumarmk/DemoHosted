@@ -4,7 +4,7 @@
       <!--Product Image -->
       <div class="product_image">
         <img
-          src="https://via.placeholder.com/150"
+          :src="product.url"
           :alt="product.name">
         <p class="product_offer_details">{{product.offer}}</p>
       </div>
@@ -37,6 +37,10 @@
 <script>
 import Footer from './Footer.vue'
 import PopUp from './PopUp.vue'
+import Vue from 'vue'
+import axios from 'axios'
+
+Vue.use(axios)
 
 export default {
   name: 'Cart',
@@ -49,6 +53,11 @@ export default {
   },
 
   data() {
+
+    axios.get('https://sharonkumarmk.github.io/apidemo/product.json')
+      .then(response => 
+        this.$store.state.products = response.data.products);
+
     return this.$store.state;
   },
 
