@@ -4,7 +4,7 @@
         <p>Qty: {{qty}}</p>
         <p>Price: {{price}}</p>
       </div>
-      <button @click="openModal" class="checkout_button"> Add Cart </button>
+      <button @click="openModal" class="checkout_button"> Check Out</button>
     </div>
 </template>
 

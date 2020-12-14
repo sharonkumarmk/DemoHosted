@@ -17,7 +17,7 @@
         </p>
         <p class="product_offer_price">  &#8377; {{product.offerPrice}}</p>
         <div class="cart">
-          <button class="add_cart_button"> Add Cart </button>
+          <button class="add_cart_button" @click="UpdateCart(product, 'add')"> Add Cart </button>
           <button class="remove_button" @click="UpdateCart(product, 'remove')"> - </button>
           <span class="product_quantity">{{ product.quantity }}</span>
           <button class="add_button" @click="UpdateCart(product, 'add')"> + </button>
